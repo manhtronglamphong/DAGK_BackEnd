@@ -1,0 +1,17 @@
+// {
+//   "type": "postgres",
+//   "host": "ec2-52-0-155-79.compute-1.amazonaws.com",
+//   "port": 5432,
+//   "username": "xkukkoedhnytfl",
+//   "password": "636c4e3cc2a8fa127d313733422a80f174a9f38fbb52993d6dbafc65ceb53aec",
+//   "database": "devsn68becq27l",
+//   "entities": [ "./dist/**/**.entity{.ts,.js}" ],
+//   "synchronize": true,
+//   "logging": true,
+//   "migrationsRun": true,
+//   "migrations": [ "./dist/migrations/*.js" ],
+//   "keepConnectionAlive": true,
+//   "cli": {
+//     "migrationsDir": "src/migrations"
+//   }
+// }
