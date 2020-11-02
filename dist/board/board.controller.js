@@ -28,6 +28,9 @@ let BoardController = class BoardController {
     async getOneBoard(boardId) {
         return await this.boardService.getOneBoard(boardId);
     }
+    async getUserBoard(username) {
+        return await this.boardService.getUserBoard(username);
+    }
     async newBoard(board) {
         return await this.boardService.newBoard(board);
     }
@@ -45,6 +48,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], BoardController.prototype, "getOneBoard", null);
+__decorate([
+    common_1.Get(':username'),
+    __param(0, common_1.Param('username')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], BoardController.prototype, "getUserBoard", null);
 __decorate([
     common_1.Post('/newBoard'),
     __param(0, common_1.Body(new createBoardPipe_class_1.CreateBoardPipe)),

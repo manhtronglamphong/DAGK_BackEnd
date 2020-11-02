@@ -9,6 +9,9 @@ export declare class BoardController {
     getOneBoard(boardId: string): Promise<{
         data: import("../entities/board.entity").Board;
     }>;
+    getUserBoard(username: string): Promise<{
+        data: import("../entities/board.entity").Board;
+    }>;
     newBoard(board: CreateBoard): Promise<{
         data: CreateBoard & import("../entities/board.entity").Board;
     }>;

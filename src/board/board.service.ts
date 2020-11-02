@@ -21,6 +21,11 @@ export class BoardService {
         return {data: board};
     }
 
+    async getUserBoard(userName:string){
+        const board = await this.boardRepository.findOne({where:{username:userName}});
+        return {data: board};
+    }
+
     async newBoard(newboard:CreateBoard){
         const newl = await this.boardRepository.save(newboard);
         return {data: newl};

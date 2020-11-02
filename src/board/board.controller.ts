@@ -23,6 +23,11 @@ export class BoardController {
         return await this.boardService.getOneBoard(boardId);
     }
 
+    @Get(':username')
+    async getUserBoard(@Param('username') username: string){
+        return await this.boardService.getUserBoard(username);
+    }
+
     @Post('/newBoard')
     async newBoard(@Body(new CreateBoardPipe) board: CreateBoard){
     return await this.boardService.newBoard(board);

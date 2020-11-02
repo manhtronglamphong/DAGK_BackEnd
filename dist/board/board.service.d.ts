@@ -10,6 +10,9 @@ export declare class BoardService {
     getOneBoard(boardId: string): Promise<{
         data: Board;
     }>;
+    getUserBoard(userName: string): Promise<{
+        data: Board;
+    }>;
     newBoard(newboard: CreateBoard): Promise<{
         data: CreateBoard & Board;
     }>;

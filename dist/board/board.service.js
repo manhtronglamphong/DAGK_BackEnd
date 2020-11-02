@@ -29,6 +29,10 @@ let BoardService = class BoardService {
         const board = await this.boardRepository.findOne({ where: { id: boardId } });
         return { data: board };
     }
+    async getUserBoard(userName) {
+        const board = await this.boardRepository.findOne({ where: { username: userName } });
+        return { data: board };
+    }
     async newBoard(newboard) {
         const newl = await this.boardRepository.save(newboard);
         return { data: newl };
