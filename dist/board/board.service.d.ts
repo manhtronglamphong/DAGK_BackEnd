@@ -11,7 +11,7 @@ export declare class BoardService {
         data: Board;
     }>;
     getUserBoard(userName: string): Promise<{
-        data: Board;
+        data: Board[];
     }>;
     newBoard(newboard: CreateBoard): Promise<{
         data: CreateBoard & Board;

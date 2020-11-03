@@ -2682,13 +2682,13 @@
         "affectsGlobalScope": false
       },
       "../src/board/board.service.ts": {
-        "version": "675f01e0c1fd98825bf64b6e9a16a2795360200ea80ef2607afef5acfaa2556b",
-        "signature": "853b481051b782c7b160493e935569fbbfbd13dd1ef1e38286b04d8c039f6230",
+        "version": "ee7f0df5aa88fc96191b99b5c7f8d007df97f635eccf072588bacce1f721603c",
+        "signature": "c0aae9b77bd35f3301d0918fd07c87954642ed8bb53bf60af2d643dccf0a3a44",
         "affectsGlobalScope": false
       },
       "../src/board/board.controller.ts": {
-        "version": "8b8af84c97e6673c40744898ff3fc95cf82c217d63c91761e725d9da685e5df6",
-        "signature": "3e5b09612100e229aed3b2257b752a155737f79852ecd641c90324fe7a1f85e5",
+        "version": "264bc48f3e7f06f092c9cc2a843edf73bee9c8c44a1c21ca6a098782d6185b8b",
+        "signature": "537f0d455eb44fe4f54120284437fe566e0e170c99851e83a810556b31e9a739",
         "affectsGlobalScope": false
       },
       "../src/board/board.module.ts": {

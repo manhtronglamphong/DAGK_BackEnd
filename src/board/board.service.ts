@@ -22,7 +22,7 @@ export class BoardService {
     }
 
     async getUserBoard(userName:string){
-        const board = await this.boardRepository.findOne({where:{username:userName}});
+        const board = await this.boardRepository.find({where:{username:userName}});
         return {data: board};
     }
 

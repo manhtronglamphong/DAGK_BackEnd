@@ -49,7 +49,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], BoardController.prototype, "getOneBoard", null);
 __decorate([
-    common_1.Get(':username'),
+    common_1.Get('/boards/:username'),
     __param(0, common_1.Param('username')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),

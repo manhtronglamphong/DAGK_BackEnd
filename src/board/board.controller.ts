@@ -23,7 +23,7 @@ export class BoardController {
         return await this.boardService.getOneBoard(boardId);
     }
 
-    @Get(':username')
+    @Get('/boards/:username')
     async getUserBoard(@Param('username') username: string){
         return await this.boardService.getUserBoard(username);
     }
