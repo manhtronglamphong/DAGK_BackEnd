@@ -14,6 +14,6 @@ export declare class TagService {
         data: CreateTag & Tag;
     }>;
     getBoardTag(boardId: string): Promise<{
-        data: Tag;
+        data: Tag[];
     }>;
 }
