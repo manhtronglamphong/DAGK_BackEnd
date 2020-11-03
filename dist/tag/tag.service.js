@@ -33,6 +33,10 @@ let TagService = class TagService {
         const newl = await this.tagRepository.save(newtag);
         return { data: newl };
     }
+    async getBoardTag(boardId) {
+        const tag = await this.tagRepository.findOne({ where: { boardId: boardId } });
+        return { data: tag };
+    }
 };
 TagService = __decorate([
     common_1.Injectable(),

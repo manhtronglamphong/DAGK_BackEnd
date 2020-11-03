@@ -26,4 +26,9 @@ export class TagService {
         return {data: newl};
       }
 
+    async getBoardTag(boardId:string){
+        const tag = await this.tagRepository.findOne({where :{boardId:boardId}});
+        return {data: tag};
+    }
+
 }

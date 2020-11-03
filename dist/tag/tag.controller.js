@@ -28,6 +28,9 @@ let TagController = class TagController {
     async getOneTag(tagId) {
         return await this.tagService.getOneTag(tagId);
     }
+    async getBoardTag(boardId) {
+        return await this.tagService.getBoardTag(boardId);
+    }
     async newTag(tag) {
         return await this.tagService.newBoard(tag);
     }
@@ -45,6 +48,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], TagController.prototype, "getOneTag", null);
+__decorate([
+    common_1.Get('/board/:boardId'),
+    __param(0, common_1.Param('boardId')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], TagController.prototype, "getBoardTag", null);
 __decorate([
     common_1.Post('/newTag'),
     __param(0, common_1.Body(new createTagPipe_class_1.CreateTagPipe)),

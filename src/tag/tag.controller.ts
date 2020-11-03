@@ -23,6 +23,11 @@ export class TagController {
         return await this.tagService.getOneTag(tagId);
     }
 
+    @Get('/board/:boardId')
+    async getBoardTag(@Param('boardId') boardId: string){
+        return await this.tagService.getBoardTag(boardId);
+    }
+
     @Post('/newTag')
     async newTag(@Body(new CreateTagPipe) tag: CreateTag){
     return await this.tagService.newBoard(tag);
