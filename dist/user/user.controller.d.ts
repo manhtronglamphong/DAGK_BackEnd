@@ -1,8 +1,11 @@
-import { CreateUser } from './user.dto';
+import { CreateUser, Login } from './user.dto';
 import { UserService } from './user.service';
 export declare class UserController {
     private readonly userService;
     constructor(userService: UserService);
+    Login(user: Login): Promise<{
+        data: import("../entities/user.entity").User;
+    }>;
     getUser(): Promise<{
         data: import("../entities/user.entity").User[];
     }>;

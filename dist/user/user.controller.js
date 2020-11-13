@@ -21,6 +21,9 @@ let UserController = class UserController {
     constructor(userService) {
         this.userService = userService;
     }
+    async Login(user) {
+        return await this.userService.login(user);
+    }
     async getUser() {
         return await this.userService.getUser();
     }
@@ -31,6 +34,13 @@ let UserController = class UserController {
         return await this.userService.newUser(user);
     }
 };
+__decorate([
+    common_1.Post('/login'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_dto_1.Login]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "Login", null);
 __decorate([
     common_1.Get(''),
     __metadata("design:type", Function),
@@ -45,8 +55,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "getOneUser", null);
 __decorate([
-    common_1.Post('/newUser'),
-    __param(0, common_1.Body(new createUserPipe_class_1.CreateUserPipe)),
+    common_1.Post('/register'),
+    __param(0, common_1.Body(new createUserPipe_class_1.CreateUserPipe())),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_dto_1.CreateUser]),
     __metadata("design:returntype", Promise)

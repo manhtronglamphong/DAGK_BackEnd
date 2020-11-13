@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const bcrypt_1 = require("bcrypt");
 const user_entity_1 = require("../entities/user.entity");
 const typeorm_2 = require("typeorm");
 let UserService = class UserService {
@@ -27,13 +26,33 @@ let UserService = class UserService {
         return { data: user };
     }
     async getOneUser(userName) {
-        const user = await this.userRepository.findOne({ where: { username: userName } });
+        const user = await this.userRepository.findOne({
+            where: { username: userName },
+        });
         return { data: user };
     }
     async newUser(newuser) {
+        console.log(newuser);
         const newl = await this.userRepository.save(newuser);
-        newl.password = await bcrypt_1.hash(newl.password, 10);
         return { data: newl };
+    }
+    async login(user) {
+        const existUser = await this.userRepository.findOne({
+            where: { username: user.username },
+        });
+        if (!existUser) {
+            throw new common_1.HttpException({
+                status: common_1.HttpStatus.NOT_FOUND,
+                error: 'USERNAME NOT FOUND',
+            }, common_1.HttpStatus.NOT_FOUND);
+        }
+        if (user.password != existUser.password) {
+            throw new common_1.HttpException({
+                status: common_1.HttpStatus.BAD_REQUEST,
+                error: 'WRONG PASSWORD',
+            }, common_1.HttpStatus.BAD_REQUEST);
+        }
+        return { data: existUser };
     }
 };
 UserService = __decorate([

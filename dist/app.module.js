@@ -20,17 +20,22 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forRoot({
+        imports: [
+            typeorm_1.TypeOrmModule.forRoot({
                 type: 'mongodb',
                 url: 'mongodb+srv://meo_lamphong:lamphong19@cluster0.j3ttt.mongodb.net/DAGK?retryWrites=true&w=majority',
                 database: 'DAGK',
-                entities: [
-                    __dirname + '/**/*.entity{.ts,.js}',
-                ],
+                entities: [__dirname + '/**/*.entity{.ts,.js}'],
                 ssl: true,
                 useUnifiedTopology: true,
-                useNewUrlParser: true
-            }), board_module_1.BoardModule, user_module_1.UserModule, tag_module_1.TagModule, shared_board_module_1.SharedBoardModule, column_module_1.ColumnModule],
+                useNewUrlParser: true,
+            }),
+            board_module_1.BoardModule,
+            user_module_1.UserModule,
+            tag_module_1.TagModule,
+            shared_board_module_1.SharedBoardModule,
+            column_module_1.ColumnModule,
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

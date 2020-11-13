@@ -1,6 +1,8 @@
 export declare class CreateUser {
     username: string;
-    name: string;
     password: string;
-    gmail: string;
+}
+export declare class Login {
+    username: string;
+    password: string;
 }

@@ -17,22 +17,10 @@ let CreateUserPipe = class CreateUserPipe {
                 error: 'USERNAME_REQUIRED',
             }, common_1.HttpStatus.BAD_REQUEST);
         }
-        if (!value.name) {
-            throw new common_1.HttpException({
-                status: common_1.HttpStatus.BAD_REQUEST,
-                error: 'NAME_REQUIRED',
-            }, common_1.HttpStatus.BAD_REQUEST);
-        }
         if (!value.password) {
             throw new common_1.HttpException({
                 status: common_1.HttpStatus.BAD_REQUEST,
                 error: 'PASSWORD_REQUIRED',
-            }, common_1.HttpStatus.BAD_REQUEST);
-        }
-        if (!value.gmail) {
-            throw new common_1.HttpException({
-                status: common_1.HttpStatus.BAD_REQUEST,
-                error: 'EMAIL_REQUIRED',
             }, common_1.HttpStatus.BAD_REQUEST);
         }
         return value;
