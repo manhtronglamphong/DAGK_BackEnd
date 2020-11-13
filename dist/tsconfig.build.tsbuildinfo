@@ -2767,13 +2767,13 @@
         "affectsGlobalScope": false
       },
       "../src/tag/tag.service.ts": {
-        "version": "2e69d73e4eb0461e2f358b577bc97a7d2dcd2093b081de7cc798976070f4d598",
-        "signature": "067669c6c7f0f66c6827a4fae61f05c0345cbf4970468a84d01fdd1f9ec96685",
+        "version": "61c20474bbae4e0320eb86530eab0fd426cd08268d7d2dc6582a98399599e2ee",
+        "signature": "de0f0cb868da02c11d4d0f256122bf58a2ff1531b0e8a742bf5bc3943010bb60",
         "affectsGlobalScope": false
       },
       "../src/tag/tag.controller.ts": {
         "version": "d5e36cd74cacfd424213f6d2bd952c7f54ce1bd45c4e2e46f276b79315da64d3",
-        "signature": "7aa5f9c4ad410eb32d8d01b7e3f0f159d337fb1edaea91dc0aebf6b41cc271e0",
+        "signature": "11ae80513a808dfb48e3ebc47489e51e7722a1f35a367d3d9718a1747f3d10c9",
         "affectsGlobalScope": false
       },
       "../src/tag/tag.module.ts": {

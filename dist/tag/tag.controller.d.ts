@@ -10,7 +10,7 @@ export declare class TagController {
         data: import("../entities/tag.entity").Tag;
     }>;
     getBoardTag(boardId: string): Promise<{
-        data: import("../entities/tag.entity").Tag[];
+        data: import("../entities/tag.entity").Tag;
     }>;
     newTag(tag: CreateTag): Promise<{
         data: CreateTag & import("../entities/tag.entity").Tag;
