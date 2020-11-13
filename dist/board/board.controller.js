@@ -57,7 +57,7 @@ __decorate([
 ], BoardController.prototype, "getUserBoard", null);
 __decorate([
     common_1.Post('/newBoard'),
-    __param(0, common_1.Body(new createBoardPipe_class_1.CreateBoardPipe)),
+    __param(0, common_1.Body(new createBoardPipe_class_1.CreateBoardPipe())),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [board_dto_1.CreateBoard]),
     __metadata("design:returntype", Promise)

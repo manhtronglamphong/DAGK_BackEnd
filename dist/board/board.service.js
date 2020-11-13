@@ -26,11 +26,15 @@ let BoardService = class BoardService {
         return { data: board };
     }
     async getOneBoard(boardId) {
-        const board = await this.boardRepository.findOne({ where: { id: boardId } });
+        const board = await this.boardRepository.findOne({
+            where: { id: boardId },
+        });
         return { data: board };
     }
     async getUserBoard(userName) {
-        const board = await this.boardRepository.find({ where: { username: userName } });
+        const board = await this.boardRepository.find({
+            where: { username: userName },
+        });
         return { data: board };
     }
     async newBoard(newboard) {

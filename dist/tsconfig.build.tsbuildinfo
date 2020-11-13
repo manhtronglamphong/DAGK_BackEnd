@@ -1497,8 +1497,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/query-builder/queryexpressionmap.d.ts": {
-        "version": "0c9233c6aa33633c047b63621ae8bb09a87e2f2756a97599a5f4aa23dd26607f",
-        "signature": "0c9233c6aa33633c047b63621ae8bb09a87e2f2756a97599a5f4aa23dd26607f",
+        "version": "7f9cf5124934f2291e1e10512b6f2f48b0428351325941aa116379585e266b70",
+        "signature": "7f9cf5124934f2291e1e10512b6f2f48b0428351325941aa116379585e266b70",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/query-builder/brackets.d.ts": {
@@ -1567,18 +1567,18 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/find-options/findoperatortype.d.ts": {
-        "version": "85067a288adbaff10952e57ac8958e8c04f163378278f7d997e317efea4a1fca",
-        "signature": "85067a288adbaff10952e57ac8958e8c04f163378278f7d997e317efea4a1fca",
+        "version": "7d659e9b2e21d1ead6a231cccd32fe699e3010bbd4b12b98557f689eff8ac239",
+        "signature": "7d659e9b2e21d1ead6a231cccd32fe699e3010bbd4b12b98557f689eff8ac239",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/find-options/findoperator.d.ts": {
-        "version": "5882da1337f7ff18346207a0e7121f5bb25897707822748403cad030536c0358",
-        "signature": "5882da1337f7ff18346207a0e7121f5bb25897707822748403cad030536c0358",
+        "version": "ff9bcf9a57b109dceedfc4b3a7e8ef42e1b4939c47428bacd0415520391c9705",
+        "signature": "ff9bcf9a57b109dceedfc4b3a7e8ef42e1b4939c47428bacd0415520391c9705",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/query-builder/querybuilder.d.ts": {
-        "version": "f00b2206c05a141fdf23b35e1680a444189ba3aa43e535a8a7ef7dd7f0b46fb3",
-        "signature": "f00b2206c05a141fdf23b35e1680a444189ba3aa43e535a8a7ef7dd7f0b46fb3",
+        "version": "6cdeda19e2f4d71bbd700b79952a9f8a52ea63aff77bc818a0e902742914b6b8",
+        "signature": "6cdeda19e2f4d71bbd700b79952a9f8a52ea63aff77bc818a0e902742914b6b8",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/platform/platformtools.d.ts": {
@@ -1587,8 +1587,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/query-builder/selectquerybuilder.d.ts": {
-        "version": "d3617c61031cbf654be32cbec55f61849f34a91c0d3329638fe8e2a271587870",
-        "signature": "d3617c61031cbf654be32cbec55f61849f34a91c0d3329638fe8e2a271587870",
+        "version": "3163241e7064db98f45d8ad03281dad84fdb5124fd104e84aea9747a06ccdd61",
+        "signature": "3163241e7064db98f45d8ad03281dad84fdb5124fd104e84aea9747a06ccdd61",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/metadata-args/relationidmetadataargs.d.ts": {
@@ -1612,8 +1612,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/metadata/types/eventlistenertypes.d.ts": {
-        "version": "23aa2adecbe990bd7811b0c65917393a18f9c7a598af3aa7ffea48f8219a1cd6",
-        "signature": "23aa2adecbe990bd7811b0c65917393a18f9c7a598af3aa7ffea48f8219a1cd6",
+        "version": "55f75f5fa3413eb3a94bc35dd1493643a69c8696af0a817166210a80b01841b6",
+        "signature": "55f75f5fa3413eb3a94bc35dd1493643a69c8696af0a817166210a80b01841b6",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/metadata-args/entitylistenermetadataargs.d.ts": {
@@ -1767,8 +1767,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/find-options/findoneoptions.d.ts": {
-        "version": "34b8cbbc74427f19025ae9a460c7eca4dd57f95861f2b31eb92ca2d958d4ea7c",
-        "signature": "34b8cbbc74427f19025ae9a460c7eca4dd57f95861f2b31eb92ca2d958d4ea7c",
+        "version": "2de27809a0c0af8360a5b927d67fe5f97d154550d3aba449c0a0043d282ef957",
+        "signature": "2de27809a0c0af8360a5b927d67fe5f97d154550d3aba449c0a0043d282ef957",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/find-options/findmanyoptions.d.ts": {
@@ -1821,6 +1821,21 @@
         "signature": "04d5bfb0a0eecd66c0b3f522477bf69065a9703be8300fbea5566a0fc4a97b9d",
         "affectsGlobalScope": false
       },
+      "../node_modules/typeorm/subscriber/event/transactioncommitevent.d.ts": {
+        "version": "09423fcf77b1f327971c2b22ee16e744736a403b33e414fe54325296537ac9ac",
+        "signature": "09423fcf77b1f327971c2b22ee16e744736a403b33e414fe54325296537ac9ac",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typeorm/subscriber/event/transactionrollbackevent.d.ts": {
+        "version": "f3f4278ff190e4896f44e1853bb6846be75e2fdca494a6d553f375f97424a516",
+        "signature": "f3f4278ff190e4896f44e1853bb6846be75e2fdca494a6d553f375f97424a516",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typeorm/subscriber/event/transactionstartevent.d.ts": {
+        "version": "a945caa7e11a3671c7b9bf3f383e5f8ebeb90f35b66ac395bab48faf9752aec7",
+        "signature": "a945caa7e11a3671c7b9bf3f383e5f8ebeb90f35b66ac395bab48faf9752aec7",
+        "affectsGlobalScope": false
+      },
       "../node_modules/typeorm/subscriber/event/updateevent.d.ts": {
         "version": "0886e9de5fccd636d23bfe8223dd8d616d653c1c40a801a28f9c87be6d6a901d",
         "signature": "0886e9de5fccd636d23bfe8223dd8d616d653c1c40a801a28f9c87be6d6a901d",
@@ -1842,8 +1857,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/subscriber/entitysubscriberinterface.d.ts": {
-        "version": "262eb90d30862e20554b1956050781c7f5c5a9fc2185bd6cca0bea9603cc083a",
-        "signature": "262eb90d30862e20554b1956050781c7f5c5a9fc2185bd6cca0bea9603cc083a",
+        "version": "bf933fac182d47797b18f8fe63e56a300f924f1bc1fc1243e55ab7ea045a5fd6",
+        "signature": "bf933fac182d47797b18f8fe63e56a300f924f1bc1fc1243e55ab7ea045a5fd6",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/subscriber/broadcasterresult.d.ts": {
@@ -1852,13 +1867,13 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/subscriber/broadcaster.d.ts": {
-        "version": "4b01863a735368c82c974f53a41bb2fdca7702baf4103550080b9ab59e047700",
-        "signature": "4b01863a735368c82c974f53a41bb2fdca7702baf4103550080b9ab59e047700",
+        "version": "fcdb3b7823e8cd2da703a7eef46e7f7de53470c60b8ea0659c608022e8f6ad68",
+        "signature": "fcdb3b7823e8cd2da703a7eef46e7f7de53470c60b8ea0659c608022e8f6ad68",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/driver/mongodb/mongoqueryrunner.d.ts": {
-        "version": "5dad840c6e79d39cd27e2e54f93e3be5711777c24a31c52960ebccb12c83ed17",
-        "signature": "5dad840c6e79d39cd27e2e54f93e3be5711777c24a31c52960ebccb12c83ed17",
+        "version": "122e9f53a8b33e20d77f9ac008e74717f9ae4c9e591dd71ccf5c3e62b5e4f60a",
+        "signature": "122e9f53a8b33e20d77f9ac008e74717f9ae4c9e591dd71ccf5c3e62b5e4f60a",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/entity-manager/mongoentitymanager.d.ts": {
@@ -1892,8 +1907,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/query-runner/queryrunner.d.ts": {
-        "version": "09be67cd29ec5e38d271e7e9b9ba6e5b2fdb72453092eba69b6c73f1eeab2a52",
-        "signature": "09be67cd29ec5e38d271e7e9b9ba6e5b2fdb72453092eba69b6c73f1eeab2a52",
+        "version": "0ca3378f33be464877c4c93df0ecadbefa1302bc2bd5cd9f56c19d6efa962913",
+        "signature": "0ca3378f33be464877c4c93df0ecadbefa1302bc2bd5cd9f56c19d6efa962913",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/driver/types/mappedcolumntypes.d.ts": {
@@ -1977,8 +1992,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/logger/logger.d.ts": {
-        "version": "9fa8e2892e6218ef6509eb2f7c97adab9518c07594acde96c697a6e3f63ad11b",
-        "signature": "9fa8e2892e6218ef6509eb2f7c97adab9518c07594acde96c697a6e3f63ad11b",
+        "version": "a49e3af85d547004bcd8535e19b328cd39f7164abcb4e10e52763e167740abbb",
+        "signature": "a49e3af85d547004bcd8535e19b328cd39f7164abcb4e10e52763e167740abbb",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/cache/queryresultcacheoptions.d.ts": {
@@ -2072,8 +2087,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/driver/mongodb/mongoconnectionoptions.d.ts": {
-        "version": "221a4d5e9096221fb9fe1a6b8f612a4029db45b372017832eaf2ae26e3ee849f",
-        "signature": "221a4d5e9096221fb9fe1a6b8f612a4029db45b372017832eaf2ae26e3ee849f",
+        "version": "503aca11c0619cd522e1a77979050c04d3ce9dd4d4d6ac6cd98b896776e53329",
+        "signature": "503aca11c0619cd522e1a77979050c04d3ce9dd4d4d6ac6cd98b896776e53329",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/driver/cordova/cordovaconnectionoptions.d.ts": {
@@ -2541,6 +2556,11 @@
         "signature": "3c8bf00283ef468da8389119d3f5662c81106e302c8810f40ea86b1018df647e",
         "affectsGlobalScope": false
       },
+      "../node_modules/typeorm/find-options/operator/ilike.d.ts": {
+        "version": "67b248e4bac845c5139898b44cbd3e1213674bcc9831039701b5f0f957243a24",
+        "signature": "67b248e4bac845c5139898b44cbd3e1213674bcc9831039701b5f0f957243a24",
+        "affectsGlobalScope": false
+      },
       "../node_modules/typeorm/find-options/operator/like.d.ts": {
         "version": "4eafa9b29603f99f816a686872bd2c7dec00d0250eb3b1c0c9987fc12c6b999f",
         "signature": "4eafa9b29603f99f816a686872bd2c7dec00d0250eb3b1c0c9987fc12c6b999f",
@@ -2562,8 +2582,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/find-options/operator/raw.d.ts": {
-        "version": "11a312c0ed704668e5f7eb7870ecfca203d425a0c6d9b0eb546a103dd0c8eb09",
-        "signature": "11a312c0ed704668e5f7eb7870ecfca203d425a0c6d9b0eb546a103dd0c8eb09",
+        "version": "45bf5ca176cbdba570fdb372fd44343743a263f5fee80ce64876f9dcfc8eb374",
+        "signature": "45bf5ca176cbdba570fdb372fd44343743a263f5fee80ce64876f9dcfc8eb374",
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/find-options/findoptionsutils.d.ts": {
@@ -2617,8 +2637,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/typeorm/index.d.ts": {
-        "version": "46383b35adb89b63a1fb1dac5bb057e9037f5b729f9f84b4cddff67c6b8c0aa4",
-        "signature": "46383b35adb89b63a1fb1dac5bb057e9037f5b729f9f84b4cddff67c6b8c0aa4",
+        "version": "65916fb178938c9fb2c0588cf5447f5b5de992d50d0e308d6b2169a027fa9dd5",
+        "signature": "65916fb178938c9fb2c0588cf5447f5b5de992d50d0e308d6b2169a027fa9dd5",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/typeorm/dist/interfaces/entity-class-or-schema.type.d.ts": {
@@ -2672,7 +2692,7 @@
         "affectsGlobalScope": false
       },
       "../src/board/board.dto.ts": {
-        "version": "aa14bb8240f7f2b1abc8ab84e82660e2c2edfb7d87c683b3669c5cb3a6347d2d",
+        "version": "6ae939bc02fb8bf6ae50a80b21e02f9652a4bda91a826e0a1937f65e938a8e18",
         "signature": "fb1db96d0a6f8a302f2d377678c12a60a5ed22aa64d426e2b9507e5df6e7ae95",
         "affectsGlobalScope": false
       },
@@ -2682,12 +2702,12 @@
         "affectsGlobalScope": false
       },
       "../src/board/board.service.ts": {
-        "version": "ee7f0df5aa88fc96191b99b5c7f8d007df97f635eccf072588bacce1f721603c",
+        "version": "953f3eada79fa0dfe81f68c758187031573d9524d73e16f123488c31df08264d",
         "signature": "c0aae9b77bd35f3301d0918fd07c87954642ed8bb53bf60af2d643dccf0a3a44",
         "affectsGlobalScope": false
       },
       "../src/board/board.controller.ts": {
-        "version": "264bc48f3e7f06f092c9cc2a843edf73bee9c8c44a1c21ca6a098782d6185b8b",
+        "version": "2476fef0555a516de540a872f75b5357582b6a68aff55d088b46544988697206",
         "signature": "537f0d455eb44fe4f54120284437fe566e0e170c99851e83a810556b31e9a739",
         "affectsGlobalScope": false
       },
@@ -3009,11 +3029,6 @@
       "../src/main.ts": {
         "version": "6d6bb97d7e9e8174263e5799b52dccc9bc8a12ddbc846ef536d36b6cc8b97296",
         "signature": "e86a98175a828260e947dc51e92660732141a33bc9c7758ba9d3755e03ed22c9",
-        "affectsGlobalScope": false
-      },
-      "../src/user/user.entity.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -5315,6 +5330,7 @@
         "../node_modules/typeorm/find-options/joinoptions.d.ts"
       ],
       "../node_modules/typeorm/find-options/findoperator.d.ts": [
+        "../node_modules/typeorm/common/objectliteral.d.ts",
         "../node_modules/typeorm/find-options/findoperatortype.d.ts"
       ],
       "../node_modules/typeorm/find-options/findoptionsutils.d.ts": [
@@ -5330,6 +5346,9 @@
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/find-options/operator/equal.d.ts": [
+        "../node_modules/typeorm/find-options/findoperator.d.ts"
+      ],
+      "../node_modules/typeorm/find-options/operator/ilike.d.ts": [
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/find-options/operator/in.d.ts": [
@@ -5357,6 +5376,7 @@
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/find-options/operator/raw.d.ts": [
+        "../node_modules/typeorm/common/objectliteral.d.ts",
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/index.d.ts": [
@@ -5443,6 +5463,7 @@
         "../node_modules/typeorm/find-options/operator/any.d.ts",
         "../node_modules/typeorm/find-options/operator/between.d.ts",
         "../node_modules/typeorm/find-options/operator/equal.d.ts",
+        "../node_modules/typeorm/find-options/operator/ilike.d.ts",
         "../node_modules/typeorm/find-options/operator/in.d.ts",
         "../node_modules/typeorm/find-options/operator/isnull.d.ts",
         "../node_modules/typeorm/find-options/operator/lessthan.d.ts",
@@ -5456,6 +5477,7 @@
         "../node_modules/typeorm/logger/advancedconsolelogger.d.ts",
         "../node_modules/typeorm/logger/filelogger.d.ts",
         "../node_modules/typeorm/logger/logger.d.ts",
+        "../node_modules/typeorm/logger/loggeroptions.d.ts",
         "../node_modules/typeorm/logger/simpleconsolelogger.d.ts",
         "../node_modules/typeorm/metadata-args/metadataargsstorage.d.ts",
         "../node_modules/typeorm/metadata/entitymetadata.d.ts",
@@ -5979,6 +6001,9 @@
         "../node_modules/typeorm/subscriber/event/insertevent.d.ts",
         "../node_modules/typeorm/subscriber/event/loadevent.d.ts",
         "../node_modules/typeorm/subscriber/event/removeevent.d.ts",
+        "../node_modules/typeorm/subscriber/event/transactioncommitevent.d.ts",
+        "../node_modules/typeorm/subscriber/event/transactionrollbackevent.d.ts",
+        "../node_modules/typeorm/subscriber/event/transactionstartevent.d.ts",
         "../node_modules/typeorm/subscriber/event/updateevent.d.ts"
       ],
       "../node_modules/typeorm/subscriber/event/insertevent.d.ts": [
@@ -5997,6 +6022,21 @@
         "../node_modules/typeorm/connection/connection.d.ts",
         "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
         "../node_modules/typeorm/metadata/entitymetadata.d.ts",
+        "../node_modules/typeorm/query-runner/queryrunner.d.ts"
+      ],
+      "../node_modules/typeorm/subscriber/event/transactioncommitevent.d.ts": [
+        "../node_modules/typeorm/connection/connection.d.ts",
+        "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
+        "../node_modules/typeorm/query-runner/queryrunner.d.ts"
+      ],
+      "../node_modules/typeorm/subscriber/event/transactionrollbackevent.d.ts": [
+        "../node_modules/typeorm/connection/connection.d.ts",
+        "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
+        "../node_modules/typeorm/query-runner/queryrunner.d.ts"
+      ],
+      "../node_modules/typeorm/subscriber/event/transactionstartevent.d.ts": [
+        "../node_modules/typeorm/connection/connection.d.ts",
+        "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
         "../node_modules/typeorm/query-runner/queryrunner.d.ts"
       ],
       "../node_modules/typeorm/subscriber/event/updateevent.d.ts": [
@@ -7942,6 +7982,7 @@
         "../node_modules/typeorm/find-options/joinoptions.d.ts"
       ],
       "../node_modules/typeorm/find-options/findoperator.d.ts": [
+        "../node_modules/typeorm/common/objectliteral.d.ts",
         "../node_modules/typeorm/find-options/findoperatortype.d.ts"
       ],
       "../node_modules/typeorm/find-options/findoptionsutils.d.ts": [
@@ -7957,6 +7998,9 @@
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/find-options/operator/equal.d.ts": [
+        "../node_modules/typeorm/find-options/findoperator.d.ts"
+      ],
+      "../node_modules/typeorm/find-options/operator/ilike.d.ts": [
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/find-options/operator/in.d.ts": [
@@ -7984,6 +8028,7 @@
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/find-options/operator/raw.d.ts": [
+        "../node_modules/typeorm/common/objectliteral.d.ts",
         "../node_modules/typeorm/find-options/findoperator.d.ts"
       ],
       "../node_modules/typeorm/index.d.ts": [
@@ -8070,6 +8115,7 @@
         "../node_modules/typeorm/find-options/operator/any.d.ts",
         "../node_modules/typeorm/find-options/operator/between.d.ts",
         "../node_modules/typeorm/find-options/operator/equal.d.ts",
+        "../node_modules/typeorm/find-options/operator/ilike.d.ts",
         "../node_modules/typeorm/find-options/operator/in.d.ts",
         "../node_modules/typeorm/find-options/operator/isnull.d.ts",
         "../node_modules/typeorm/find-options/operator/lessthan.d.ts",
@@ -8083,6 +8129,7 @@
         "../node_modules/typeorm/logger/advancedconsolelogger.d.ts",
         "../node_modules/typeorm/logger/filelogger.d.ts",
         "../node_modules/typeorm/logger/logger.d.ts",
+        "../node_modules/typeorm/logger/loggeroptions.d.ts",
         "../node_modules/typeorm/logger/simpleconsolelogger.d.ts",
         "../node_modules/typeorm/metadata-args/metadataargsstorage.d.ts",
         "../node_modules/typeorm/metadata/entitymetadata.d.ts",
@@ -8606,6 +8653,9 @@
         "../node_modules/typeorm/subscriber/event/insertevent.d.ts",
         "../node_modules/typeorm/subscriber/event/loadevent.d.ts",
         "../node_modules/typeorm/subscriber/event/removeevent.d.ts",
+        "../node_modules/typeorm/subscriber/event/transactioncommitevent.d.ts",
+        "../node_modules/typeorm/subscriber/event/transactionrollbackevent.d.ts",
+        "../node_modules/typeorm/subscriber/event/transactionstartevent.d.ts",
         "../node_modules/typeorm/subscriber/event/updateevent.d.ts"
       ],
       "../node_modules/typeorm/subscriber/event/insertevent.d.ts": [
@@ -8624,6 +8674,21 @@
         "../node_modules/typeorm/connection/connection.d.ts",
         "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
         "../node_modules/typeorm/metadata/entitymetadata.d.ts",
+        "../node_modules/typeorm/query-runner/queryrunner.d.ts"
+      ],
+      "../node_modules/typeorm/subscriber/event/transactioncommitevent.d.ts": [
+        "../node_modules/typeorm/connection/connection.d.ts",
+        "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
+        "../node_modules/typeorm/query-runner/queryrunner.d.ts"
+      ],
+      "../node_modules/typeorm/subscriber/event/transactionrollbackevent.d.ts": [
+        "../node_modules/typeorm/connection/connection.d.ts",
+        "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
+        "../node_modules/typeorm/query-runner/queryrunner.d.ts"
+      ],
+      "../node_modules/typeorm/subscriber/event/transactionstartevent.d.ts": [
+        "../node_modules/typeorm/connection/connection.d.ts",
+        "../node_modules/typeorm/entity-manager/entitymanager.d.ts",
         "../node_modules/typeorm/query-runner/queryrunner.d.ts"
       ],
       "../node_modules/typeorm/subscriber/event/updateevent.d.ts": [
@@ -9228,6 +9293,7 @@
       "../node_modules/typeorm/find-options/operator/any.d.ts",
       "../node_modules/typeorm/find-options/operator/between.d.ts",
       "../node_modules/typeorm/find-options/operator/equal.d.ts",
+      "../node_modules/typeorm/find-options/operator/ilike.d.ts",
       "../node_modules/typeorm/find-options/operator/in.d.ts",
       "../node_modules/typeorm/find-options/operator/isnull.d.ts",
       "../node_modules/typeorm/find-options/operator/lessthan.d.ts",
@@ -9349,6 +9415,9 @@
       "../node_modules/typeorm/subscriber/event/insertevent.d.ts",
       "../node_modules/typeorm/subscriber/event/loadevent.d.ts",
       "../node_modules/typeorm/subscriber/event/removeevent.d.ts",
+      "../node_modules/typeorm/subscriber/event/transactioncommitevent.d.ts",
+      "../node_modules/typeorm/subscriber/event/transactionrollbackevent.d.ts",
+      "../node_modules/typeorm/subscriber/event/transactionstartevent.d.ts",
       "../node_modules/typeorm/subscriber/event/updateevent.d.ts",
       "../node_modules/typescript/lib/lib.dom.d.ts",
       "../node_modules/typescript/lib/lib.dom.iterable.d.ts",
@@ -9414,7 +9483,6 @@
       "../src/tag/tag.service.ts",
       "../src/user/user.controller.ts",
       "../src/user/user.dto.ts",
-      "../src/user/user.entity.ts",
       "../src/user/user.module.ts",
       "../src/user/user.service.ts"
     ]
