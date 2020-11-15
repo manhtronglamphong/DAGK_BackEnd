@@ -34,7 +34,7 @@ let TagService = class TagService {
         return { data: newl };
     }
     async getBoardTag(boardId) {
-        const tag = await this.tagRepository.findOne({ where: { boardId: boardId } });
+        const tag = await this.tagRepository.find({ where: { boardId: boardId } });
         return { data: tag };
     }
 };

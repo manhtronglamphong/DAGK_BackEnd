@@ -21,9 +21,6 @@ let UserController = class UserController {
     constructor(userService) {
         this.userService = userService;
     }
-    async Login(user) {
-        return await this.userService.login(user);
-    }
     async getUser() {
         return await this.userService.getUser();
     }
@@ -31,16 +28,13 @@ let UserController = class UserController {
         return await this.userService.getOneUser(username);
     }
     async newUser(user) {
+        console.log(user.username + 'hihi' + user.password);
         return await this.userService.newUser(user);
     }
+    async Login(user) {
+        return await this.userService.login(user);
+    }
 };
-__decorate([
-    common_1.Post('/login'),
-    __param(0, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [user_dto_1.Login]),
-    __metadata("design:returntype", Promise)
-], UserController.prototype, "Login", null);
 __decorate([
     common_1.Get(''),
     __metadata("design:type", Function),
@@ -61,6 +55,13 @@ __decorate([
     __metadata("design:paramtypes", [user_dto_1.CreateUser]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "newUser", null);
+__decorate([
+    common_1.Post('/login'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_dto_1.Login]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "Login", null);
 UserController = __decorate([
     common_1.Controller('user'),
     __param(0, common_1.Inject(user_service_1.UserService)),

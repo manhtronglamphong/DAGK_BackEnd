@@ -3,9 +3,6 @@ import { UserService } from './user.service';
 export declare class UserController {
     private readonly userService;
     constructor(userService: UserService);
-    Login(user: Login): Promise<{
-        data: import("../entities/user.entity").User;
-    }>;
     getUser(): Promise<{
         data: import("../entities/user.entity").User[];
     }>;
@@ -14,5 +11,8 @@ export declare class UserController {
     }>;
     newUser(user: CreateUser): Promise<{
         data: CreateUser & import("../entities/user.entity").User;
+    }>;
+    Login(user: Login): Promise<{
+        data: import("../entities/user.entity").User;
     }>;
 }

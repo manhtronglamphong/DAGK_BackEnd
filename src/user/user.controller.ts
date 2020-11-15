@@ -10,11 +10,6 @@ export class UserController {
     private readonly userService: UserService,
   ) {}
 
-  @Post('/login')
-  async Login(@Body() user: Login) {
-    return await this.userService.login(user);
-  }
-
   @Get('')
   async getUser() {
     return await this.userService.getUser();
@@ -27,6 +22,12 @@ export class UserController {
 
   @Post('/register')
   async newUser(@Body(new CreateUserPipe()) user: CreateUser) {
+    console.log(user.username + 'hihi' + user.password);
     return await this.userService.newUser(user);
+  }
+
+  @Post('/login')
+  async Login(@Body() user: Login) {
+    return await this.userService.login(user);
   }
 }
