@@ -9,10 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateTag = void 0;
+exports.BoardTag = exports.CreateTag = void 0;
 const swagger_1 = require("@nestjs/swagger");
 class CreateTag {
 }
+__decorate([
+    swagger_1.ApiProperty({ type: String }),
+    __metadata("design:type", String)
+], CreateTag.prototype, "username", void 0);
 __decorate([
     swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", String)
@@ -20,10 +24,21 @@ __decorate([
 __decorate([
     swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", String)
-], CreateTag.prototype, "boardId", void 0);
+], CreateTag.prototype, "board", void 0);
 __decorate([
     swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", String)
 ], CreateTag.prototype, "column", void 0);
 exports.CreateTag = CreateTag;
+class BoardTag {
+}
+__decorate([
+    swagger_1.ApiProperty({ type: String }),
+    __metadata("design:type", String)
+], BoardTag.prototype, "username", void 0);
+__decorate([
+    swagger_1.ApiProperty({ type: String }),
+    __metadata("design:type", String)
+], BoardTag.prototype, "board", void 0);
+exports.BoardTag = BoardTag;
 //# sourceMappingURL=tag.dto.js.map

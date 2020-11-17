@@ -3,7 +3,7 @@ import { TagService } from './tag.service';
 export declare class TagController {
     private readonly tagService;
     constructor(tagService: TagService);
-    getBoard(): Promise<{
+    getBoard(username: string, board: string): Promise<{
         data: import("../entities/tag.entity").Tag[];
     }>;
     getOneTag(tagId: string): Promise<{

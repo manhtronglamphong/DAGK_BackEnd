@@ -22,7 +22,6 @@ export class UserController {
 
   @Post('/register')
   async newUser(@Body(new CreateUserPipe()) user: CreateUser) {
-    console.log(user.username + 'hihi' + user.password);
     return await this.userService.newUser(user);
   }
 

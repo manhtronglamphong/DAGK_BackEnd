@@ -1,18 +1,27 @@
-import { CreateBoard } from './board.dto';
+import { Board } from 'src/entities/board.entity';
+import { CreateBoard, RenameBoard } from './board.dto';
 import { BoardService } from './board.service';
 export declare class BoardController {
     private readonly boardService;
     constructor(boardService: BoardService);
     getBoard(): Promise<{
-        data: import("../entities/board.entity").Board[];
+        data: Board[];
     }>;
     getOneBoard(boardId: string): Promise<{
-        data: import("../entities/board.entity").Board;
+        data: Board;
     }>;
     getUserBoard(username: string): Promise<{
-        data: import("../entities/board.entity").Board[];
+        data: Board[];
     }>;
     newBoard(board: CreateBoard): Promise<{
-        data: CreateBoard & import("../entities/board.entity").Board;
+        data: CreateBoard & Board;
+    }>;
+    deleteBoard(board: CreateBoard): Promise<{
+        data: Board;
+    }>;
+    renameBoard(board: RenameBoard): Promise<{
+        data: {
+            name: string;
+        } & Board;
     }>;
 }

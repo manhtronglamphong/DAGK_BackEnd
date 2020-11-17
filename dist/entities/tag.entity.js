@@ -14,6 +14,10 @@ const typeorm_1 = require("typeorm");
 let Tag = class Tag {
 };
 __decorate([
+    typeorm_1.ObjectIdColumn(),
+    __metadata("design:type", String)
+], Tag.prototype, "_id", void 0);
+__decorate([
     typeorm_1.PrimaryGeneratedColumn('uuid'),
     __metadata("design:type", String)
 ], Tag.prototype, "id", void 0);

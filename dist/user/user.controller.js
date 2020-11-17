@@ -28,7 +28,6 @@ let UserController = class UserController {
         return await this.userService.getOneUser(username);
     }
     async newUser(user) {
-        console.log(user.username + 'hihi' + user.password);
         return await this.userService.newUser(user);
     }
     async Login(user) {

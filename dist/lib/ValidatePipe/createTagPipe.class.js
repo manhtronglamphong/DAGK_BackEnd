@@ -17,7 +17,7 @@ let CreateTagPipe = class CreateTagPipe {
                 error: 'NAME_REQUIRED',
             }, common_1.HttpStatus.BAD_REQUEST);
         }
-        if (!value.boardId) {
+        if (!value.board) {
             throw new common_1.HttpException({
                 status: common_1.HttpStatus.BAD_REQUEST,
                 error: 'BOARD_REQUIRED',

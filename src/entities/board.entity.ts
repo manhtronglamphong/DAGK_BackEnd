@@ -6,11 +6,14 @@ import {
   DeleteDateColumn,
   CreateDateColumn,
   ObjectIdColumn,
+  ObjectID,
+  PrimaryColumn,
 } from 'typeorm';
+
 @Entity()
 export class Board {
-  @ObjectIdColumn({ name: 'id' })
-  _id!: string;
+  @ObjectIdColumn()
+  _id: string;
 
   @PrimaryGeneratedColumn('uuid')
   id: string;

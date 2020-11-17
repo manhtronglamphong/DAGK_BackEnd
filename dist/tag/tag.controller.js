@@ -22,8 +22,8 @@ let TagController = class TagController {
     constructor(tagService) {
         this.tagService = tagService;
     }
-    async getBoard() {
-        return await this.tagService.getTag();
+    async getBoard(username, board) {
+        return await this.tagService.getTag(username, board);
     }
     async getOneTag(tagId) {
         return await this.tagService.getOneTag(tagId);
@@ -36,9 +36,11 @@ let TagController = class TagController {
     }
 };
 __decorate([
-    common_1.Get(''),
+    common_1.Get('/:username/:board'),
+    __param(0, common_1.Param('username')),
+    __param(1, common_1.Param('board')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)
 ], TagController.prototype, "getBoard", null);
 __decorate([
@@ -57,7 +59,7 @@ __decorate([
 ], TagController.prototype, "getBoardTag", null);
 __decorate([
     common_1.Post('/newTag'),
-    __param(0, common_1.Body(new createTagPipe_class_1.CreateTagPipe)),
+    __param(0, common_1.Body(new createTagPipe_class_1.CreateTagPipe())),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [tag_dto_1.CreateTag]),
     __metadata("design:returntype", Promise)

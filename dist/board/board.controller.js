@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BoardController = void 0;
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
+const board_entity_1 = require("../entities/board.entity");
 const createBoardPipe_class_1 = require("../lib/ValidatePipe/createBoardPipe.class");
 const board_dto_1 = require("./board.dto");
 const board_service_1 = require("./board.service");
@@ -33,6 +34,12 @@ let BoardController = class BoardController {
     }
     async newBoard(board) {
         return await this.boardService.newBoard(board);
+    }
+    async deleteBoard(board) {
+        return await this.boardService.deleteBoard(board);
+    }
+    async renameBoard(board) {
+        return await this.boardService.renameBoard(board);
     }
 };
 __decorate([
@@ -57,11 +64,25 @@ __decorate([
 ], BoardController.prototype, "getUserBoard", null);
 __decorate([
     common_1.Post('/newBoard'),
-    __param(0, common_1.Body(new createBoardPipe_class_1.CreateBoardPipe)),
+    __param(0, common_1.Body(new createBoardPipe_class_1.CreateBoardPipe())),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [board_dto_1.CreateBoard]),
     __metadata("design:returntype", Promise)
 ], BoardController.prototype, "newBoard", null);
+__decorate([
+    common_1.Post('/deleteBoard'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [board_dto_1.CreateBoard]),
+    __metadata("design:returntype", Promise)
+], BoardController.prototype, "deleteBoard", null);
+__decorate([
+    common_1.Post('/renameBoard'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [board_dto_1.RenameBoard]),
+    __metadata("design:returntype", Promise)
+], BoardController.prototype, "renameBoard", null);
 BoardController = __decorate([
     swagger_1.ApiTags('Board'),
     common_1.Controller('board'),

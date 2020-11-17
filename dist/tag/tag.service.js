@@ -21,9 +21,11 @@ let TagService = class TagService {
     constructor(tagRepository) {
         this.tagRepository = tagRepository;
     }
-    async getTag() {
-        const tag = await this.tagRepository.find();
-        return { data: tag };
+    async getTag(username, board) {
+        const temp = await this.tagRepository.find({
+            where: { username: username, board: board },
+        });
+        return { data: temp };
     }
     async getOneTag(tagId) {
         const tag = await this.tagRepository.findOne({ where: { id: tagId } });

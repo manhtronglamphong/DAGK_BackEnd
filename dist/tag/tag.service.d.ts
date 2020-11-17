@@ -4,7 +4,7 @@ import { CreateTag } from './tag.dto';
 export declare class TagService {
     private readonly tagRepository;
     constructor(tagRepository: Repository<Tag>);
-    getTag(): Promise<{
+    getTag(username: string, board: string): Promise<{
         data: Tag[];
     }>;
     getOneTag(tagId: string): Promise<{
