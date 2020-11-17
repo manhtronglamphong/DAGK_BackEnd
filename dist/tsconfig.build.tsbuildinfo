@@ -2732,8 +2732,8 @@
         "affectsGlobalScope": false
       },
       "../src/entities/tag.entity.ts": {
-        "version": "57558c1c9470cd9360625def1fd7b061cef613c52ec9ad8a2b608bec0c910c64",
-        "signature": "211eb74689e10a386701ae50ee53020ef1193c90df90558df66c7092d1a64153",
+        "version": "66165840446188aee4a7526ee0cf7763e4b258f58a3042b81fdd753c266d2961",
+        "signature": "6ab801ca4e01b8ca816f6969b00e763d1710ab82088fa714b266988e651dadf4",
         "affectsGlobalScope": false
       },
       "../src/tag/tag.dto.ts": {
@@ -2747,13 +2747,13 @@
         "affectsGlobalScope": false
       },
       "../src/tag/tag.service.ts": {
-        "version": "e0a307fcd3fe6a0c5164449fff9ea5f714d0206c304fa50c46d98e9d26eea177",
-        "signature": "44c9196188148b9e847dee084308268d52047462427f6dec7bd58cd6b939187f",
+        "version": "3ba22f5be46f6c59906129b752158c5a1639c016b511e55459fc7c7caffd506e",
+        "signature": "5b99ac00ba60284ba6c735a12607350ae01a0f74f31374a772c158ccb73943b7",
         "affectsGlobalScope": false
       },
       "../src/tag/tag.controller.ts": {
-        "version": "ad66bdf3fdda17a03503062d06a52adc61f0b25a646e8e5334b735a26e28faaf",
-        "signature": "0cfc25bad07bda4741ecc2efc5c034fdd37966aecb07406d385a3e980e7e5faa",
+        "version": "74f44dc8799f640ee32f3a9e84f53711343106f4e82227a37565c16ce095589c",
+        "signature": "8381cb70584fc8aef3179f0675a58747298fe8af1b937e85dadfe8d6712c5f95",
         "affectsGlobalScope": false
       },
       "../src/tag/tag.module.ts": {
@@ -8678,6 +8678,7 @@
         "../src/shared-board/shared-board.dto.ts"
       ],
       "../src/tag/tag.controller.ts": [
+        "../node_modules/typeorm/index.d.ts",
         "../src/entities/tag.entity.ts",
         "../src/tag/tag.dto.ts",
         "../src/tag/tag.service.ts"

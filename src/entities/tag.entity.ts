@@ -16,10 +16,13 @@ export class Tag {
   id: string;
 
   @Column()
+  username: string;
+
+  @Column()
   name: string;
 
   @Column()
-  boardId: string;
+  board: string;
 
   @Column()
   column: string;

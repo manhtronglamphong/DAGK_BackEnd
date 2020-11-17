@@ -16,4 +16,7 @@ export declare class TagService {
     getBoardTag(boardId: string): Promise<{
         data: Tag[];
     }>;
+    deleteTag(tag: CreateTag): Promise<{
+        data: import("typeorm").DeleteResult;
+    }>;
 }

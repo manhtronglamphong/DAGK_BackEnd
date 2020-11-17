@@ -24,11 +24,15 @@ __decorate([
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
+], Tag.prototype, "username", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
 ], Tag.prototype, "name", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
-], Tag.prototype, "boardId", void 0);
+], Tag.prototype, "board", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)

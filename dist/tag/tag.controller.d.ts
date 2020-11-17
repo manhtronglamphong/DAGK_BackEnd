@@ -15,4 +15,7 @@ export declare class TagController {
     newTag(tag: CreateTag): Promise<{
         data: CreateTag & import("../entities/tag.entity").Tag;
     }>;
+    deleteTag(tag: CreateTag): Promise<{
+        data: import("typeorm").DeleteResult;
+    }>;
 }

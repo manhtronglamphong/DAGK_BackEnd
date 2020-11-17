@@ -32,12 +32,39 @@ let TagService = class TagService {
         return { data: tag };
     }
     async newBoard(newtag) {
+        let temp = await this.tagRepository.findOne({
+            where: {
+                username: newtag.username,
+                name: newtag.name,
+                board: newtag.board,
+                column: newtag.column,
+            },
+        });
+        if (temp) {
+            throw new common_1.HttpException({
+                status: common_1.HttpStatus.BAD_REQUEST,
+                error: 'TAG ALREADY EXISTS',
+            }, common_1.HttpStatus.NOT_FOUND);
+            return;
+        }
         const newl = await this.tagRepository.save(newtag);
         return { data: newl };
     }
     async getBoardTag(boardId) {
         const tag = await this.tagRepository.find({ where: { boardId: boardId } });
         return { data: tag };
+    }
+    async deleteTag(tag) {
+        let temp = await this.tagRepository.findOne({
+            where: {
+                username: tag.username,
+                name: tag.name,
+                board: tag.board,
+                column: tag.column,
+            },
+        });
+        const del = await this.tagRepository.delete(temp);
+        return { data: del };
     }
 };
 TagService = __decorate([

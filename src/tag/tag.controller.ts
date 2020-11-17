@@ -34,4 +34,9 @@ export class TagController {
   async newTag(@Body(new CreateTagPipe()) tag: CreateTag) {
     return await this.tagService.newBoard(tag);
   }
+
+  @Post('/deleteTag')
+  async deleteTag(@Body() tag: CreateTag) {
+    return await this.tagService.deleteTag(tag);
+  }
 }

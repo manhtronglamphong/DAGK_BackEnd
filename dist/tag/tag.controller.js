@@ -34,6 +34,9 @@ let TagController = class TagController {
     async newTag(tag) {
         return await this.tagService.newBoard(tag);
     }
+    async deleteTag(tag) {
+        return await this.tagService.deleteTag(tag);
+    }
 };
 __decorate([
     common_1.Get('/:username/:board'),
@@ -64,6 +67,13 @@ __decorate([
     __metadata("design:paramtypes", [tag_dto_1.CreateTag]),
     __metadata("design:returntype", Promise)
 ], TagController.prototype, "newTag", null);
+__decorate([
+    common_1.Post('/deleteTag'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [tag_dto_1.CreateTag]),
+    __metadata("design:returntype", Promise)
+], TagController.prototype, "deleteTag", null);
 TagController = __decorate([
     swagger_1.ApiTags('Tag'),
     common_1.Controller('tag'),

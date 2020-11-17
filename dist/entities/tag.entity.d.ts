@@ -1,8 +1,9 @@
 export declare class Tag {
     _id: string;
     id: string;
+    username: string;
     name: string;
-    boardId: string;
+    board: string;
     column: string;
     createdAt: Date;
     updatedAt: Date;

@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Tag } from 'src/entities/tag.entity';
 import { Repository } from 'typeorm';
@@ -24,6 +24,24 @@ export class TagService {
   }
 
   async newBoard(newtag: CreateTag) {
+    let temp = await this.tagRepository.findOne({
+      where: {
+        username: newtag.username,
+        name: newtag.name,
+        board: newtag.board,
+        column: newtag.column,
+      },
+    });
+    if (temp) {
+      throw new HttpException(
+        {
+          status: HttpStatus.BAD_REQUEST,
+          error: 'TAG ALREADY EXISTS',
+        },
+        HttpStatus.NOT_FOUND,
+      );
+      return;
+    }
     const newl = await this.tagRepository.save(newtag);
     return { data: newl };
   }
@@ -31,5 +49,18 @@ export class TagService {
   async getBoardTag(boardId: string) {
     const tag = await this.tagRepository.find({ where: { boardId: boardId } });
     return { data: tag };
+  }
+
+  async deleteTag(tag: CreateTag) {
+    let temp = await this.tagRepository.findOne({
+      where: {
+        username: tag.username,
+        name: tag.name,
+        board: tag.board,
+        column: tag.column,
+      },
+    });
+    const del = await this.tagRepository.delete(temp);
+    return { data: del };
   }
 }
