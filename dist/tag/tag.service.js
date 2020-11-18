@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const tag_entity_1 = require("../entities/tag.entity");
 const typeorm_2 = require("typeorm");
+var Objecttt = require('mongodb').ObjectID;
 let TagService = class TagService {
     constructor(tagRepository) {
         this.tagRepository = tagRepository;
@@ -51,20 +52,25 @@ let TagService = class TagService {
         return { data: newl };
     }
     async getBoardTag(boardId) {
-        const tag = await this.tagRepository.find({ where: { boardId: boardId } });
+        const tag = await this.tagRepository.find({
+            where: { board: boardId },
+        });
         return { data: tag };
     }
     async deleteTag(tag) {
         let temp = await this.tagRepository.findOne({
-            where: {
-                username: tag.username,
-                name: tag.name,
-                board: tag.board,
-                column: tag.column,
-            },
+            where: { _id: Objecttt(tag.id) },
         });
         const del = await this.tagRepository.delete(temp);
         return { data: del };
+    }
+    async renameTag(tag) {
+        let temp = await this.tagRepository.findOne({
+            where: { _id: Objecttt(tag.id) },
+        });
+        temp.name = tag.newName;
+        await this.tagRepository.update(temp._id.toString(), temp);
+        return { data: temp };
     }
 };
 TagService = __decorate([

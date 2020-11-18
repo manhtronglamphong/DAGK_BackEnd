@@ -7,12 +7,14 @@ export class CreateBoard {
   name: string;
 }
 
+export class DeleteBoard {
+  @ApiProperty({ type: String })
+  id: string;
+}
+
 export class RenameBoard {
   @ApiProperty({ type: String })
-  username: string;
-
-  @ApiProperty({ type: String })
-  name: string;
+  id: string;
 
   @ApiProperty({ type: String })
   newName: string;

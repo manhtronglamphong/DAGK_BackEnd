@@ -13,10 +13,15 @@ export class CreateTag {
   column: string;
 }
 
-export class BoardTag {
+export class DeleteTag {
   @ApiProperty({ type: String })
-  username: string;
+  id: string;
+}
+
+export class RenameTag {
+  @ApiProperty({ type: String })
+  id: string;
 
   @ApiProperty({ type: String })
-  board: string;
+  newName: string;
 }

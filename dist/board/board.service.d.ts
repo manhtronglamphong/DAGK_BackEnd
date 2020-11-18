@@ -1,6 +1,6 @@
 import { Board } from 'src/entities/board.entity';
 import { Repository } from 'typeorm';
-import { CreateBoard, RenameBoard } from './board.dto';
+import { CreateBoard, DeleteBoard, RenameBoard } from './board.dto';
 export declare class BoardService {
     private readonly boardRepository;
     constructor(boardRepository: Repository<Board>);
@@ -16,12 +16,10 @@ export declare class BoardService {
     newBoard(newboard: CreateBoard): Promise<{
         data: CreateBoard & Board;
     }>;
-    deleteBoard(board: CreateBoard): Promise<{
+    deleteBoard(board: DeleteBoard): Promise<{
         data: Board;
     }>;
     renameBoard(board: RenameBoard): Promise<{
-        data: {
-            name: string;
-        } & Board;
+        data: Board;
     }>;
 }

@@ -1,5 +1,5 @@
 import { Board } from 'src/entities/board.entity';
-import { CreateBoard, RenameBoard } from './board.dto';
+import { CreateBoard, DeleteBoard, RenameBoard } from './board.dto';
 import { BoardService } from './board.service';
 export declare class BoardController {
     private readonly boardService;
@@ -16,12 +16,10 @@ export declare class BoardController {
     newBoard(board: CreateBoard): Promise<{
         data: CreateBoard & Board;
     }>;
-    deleteBoard(board: CreateBoard): Promise<{
+    deleteBoard(board: DeleteBoard): Promise<{
         data: Board;
     }>;
     renameBoard(board: RenameBoard): Promise<{
-        data: {
-            name: string;
-        } & Board;
+        data: Board;
     }>;
 }

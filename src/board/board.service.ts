@@ -1,8 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Board } from 'src/entities/board.entity';
-import { ObjectID, Repository } from 'typeorm';
-import { CreateBoard, RenameBoard } from './board.dto';
+import { Repository } from 'typeorm';
+import { CreateBoard, DeleteBoard, RenameBoard } from './board.dto';
+var Objecttt = require('mongodb').ObjectID;
 
 @Injectable()
 export class BoardService {
@@ -17,9 +18,8 @@ export class BoardService {
   }
   async getOneBoard(boardId: string) {
     const board = await this.boardRepository.findOne({
-      where: { username: boardId },
+      where: { _id: Objecttt(boardId) },
     });
-    console.log(board);
     return { data: board };
   }
 
@@ -48,9 +48,9 @@ export class BoardService {
     return { data: newl };
   }
 
-  async deleteBoard(board: CreateBoard) {
+  async deleteBoard(board: DeleteBoard) {
     let temp = await this.boardRepository.findOne({
-      where: { username: board.username, name: board.name },
+      where: { _id: Objecttt(board.id) },
     });
     const del = await this.boardRepository.delete(temp);
     return { data: temp };
@@ -58,9 +58,10 @@ export class BoardService {
 
   async renameBoard(board: RenameBoard) {
     let temp = await this.boardRepository.findOne({
-      where: { username: board.username, name: board.name },
+      where: { _id: Objecttt(board.id) },
     });
-    const update = await this.boardRepository.save({ name: board.newName });
-    return { data: update };
+    temp.name = board.newName;
+    await this.boardRepository.update(temp._id.toString(), temp);
+    return { data: temp };
   }
 }

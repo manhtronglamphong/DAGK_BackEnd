@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const board_entity_1 = require("../entities/board.entity");
 const typeorm_2 = require("typeorm");
+var Objecttt = require('mongodb').ObjectID;
 let BoardService = class BoardService {
     constructor(boardRepository) {
         this.boardRepository = boardRepository;
@@ -27,9 +28,8 @@ let BoardService = class BoardService {
     }
     async getOneBoard(boardId) {
         const board = await this.boardRepository.findOne({
-            where: { username: boardId },
+            where: { _id: Objecttt(boardId) },
         });
-        console.log(board);
         return { data: board };
     }
     async getUserBoard(userName) {
@@ -54,17 +54,18 @@ let BoardService = class BoardService {
     }
     async deleteBoard(board) {
         let temp = await this.boardRepository.findOne({
-            where: { username: board.username, name: board.name },
+            where: { _id: Objecttt(board.id) },
         });
         const del = await this.boardRepository.delete(temp);
         return { data: temp };
     }
     async renameBoard(board) {
         let temp = await this.boardRepository.findOne({
-            where: { username: board.username, name: board.name },
+            where: { _id: Objecttt(board.id) },
         });
-        const update = await this.boardRepository.save({ name: board.newName });
-        return { data: update };
+        temp.name = board.newName;
+        await this.boardRepository.update(temp._id.toString(), temp);
+        return { data: temp };
     }
 };
 BoardService = __decorate([

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BoardTag = exports.CreateTag = void 0;
+exports.RenameTag = exports.DeleteTag = exports.CreateTag = void 0;
 const swagger_1 = require("@nestjs/swagger");
 class CreateTag {
 }
@@ -30,15 +30,22 @@ __decorate([
     __metadata("design:type", String)
 ], CreateTag.prototype, "column", void 0);
 exports.CreateTag = CreateTag;
-class BoardTag {
+class DeleteTag {
 }
 __decorate([
     swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", String)
-], BoardTag.prototype, "username", void 0);
+], DeleteTag.prototype, "id", void 0);
+exports.DeleteTag = DeleteTag;
+class RenameTag {
+}
 __decorate([
     swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", String)
-], BoardTag.prototype, "board", void 0);
-exports.BoardTag = BoardTag;
+], RenameTag.prototype, "id", void 0);
+__decorate([
+    swagger_1.ApiProperty({ type: String }),
+    __metadata("design:type", String)
+], RenameTag.prototype, "newName", void 0);
+exports.RenameTag = RenameTag;
 //# sourceMappingURL=tag.dto.js.map

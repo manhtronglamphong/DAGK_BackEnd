@@ -73,7 +73,7 @@ __decorate([
     common_1.Post('/deleteBoard'),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [board_dto_1.CreateBoard]),
+    __metadata("design:paramtypes", [board_dto_1.DeleteBoard]),
     __metadata("design:returntype", Promise)
 ], BoardController.prototype, "deleteBoard", null);
 __decorate([

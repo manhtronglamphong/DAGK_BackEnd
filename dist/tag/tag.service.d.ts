@@ -1,6 +1,6 @@
 import { Tag } from 'src/entities/tag.entity';
 import { Repository } from 'typeorm';
-import { CreateTag } from './tag.dto';
+import { CreateTag, DeleteTag, RenameTag } from './tag.dto';
 export declare class TagService {
     private readonly tagRepository;
     constructor(tagRepository: Repository<Tag>);
@@ -16,7 +16,10 @@ export declare class TagService {
     getBoardTag(boardId: string): Promise<{
         data: Tag[];
     }>;
-    deleteTag(tag: CreateTag): Promise<{
+    deleteTag(tag: DeleteTag): Promise<{
         data: import("typeorm").DeleteResult;
+    }>;
+    renameTag(tag: RenameTag): Promise<{
+        data: Tag;
     }>;
 }

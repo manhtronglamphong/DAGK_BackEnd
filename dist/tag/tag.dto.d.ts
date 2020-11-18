@@ -4,7 +4,10 @@ export declare class CreateTag {
     board: string;
     column: string;
 }
-export declare class BoardTag {
-    username: string;
-    board: string;
+export declare class DeleteTag {
+    id: string;
+}
+export declare class RenameTag {
+    id: string;
+    newName: string;
 }

@@ -22,12 +22,6 @@ let TagController = class TagController {
     constructor(tagService) {
         this.tagService = tagService;
     }
-    async getBoard(username, board) {
-        return await this.tagService.getTag(username, board);
-    }
-    async getOneTag(tagId) {
-        return await this.tagService.getOneTag(tagId);
-    }
     async getBoardTag(boardId) {
         return await this.tagService.getBoardTag(boardId);
     }
@@ -37,22 +31,10 @@ let TagController = class TagController {
     async deleteTag(tag) {
         return await this.tagService.deleteTag(tag);
     }
+    async renameTag(tag) {
+        return await this.tagService.renameTag(tag);
+    }
 };
-__decorate([
-    common_1.Get('/:username/:board'),
-    __param(0, common_1.Param('username')),
-    __param(1, common_1.Param('board')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String]),
-    __metadata("design:returntype", Promise)
-], TagController.prototype, "getBoard", null);
-__decorate([
-    common_1.Get(':tagId'),
-    __param(0, common_1.Param('tagId')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", Promise)
-], TagController.prototype, "getOneTag", null);
 __decorate([
     common_1.Get('/board/:boardId'),
     __param(0, common_1.Param('boardId')),
@@ -71,9 +53,16 @@ __decorate([
     common_1.Post('/deleteTag'),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [tag_dto_1.CreateTag]),
+    __metadata("design:paramtypes", [tag_dto_1.DeleteTag]),
     __metadata("design:returntype", Promise)
 ], TagController.prototype, "deleteTag", null);
+__decorate([
+    common_1.Post('/renameTag'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [tag_dto_1.RenameTag]),
+    __metadata("design:returntype", Promise)
+], TagController.prototype, "renameTag", null);
 TagController = __decorate([
     swagger_1.ApiTags('Tag'),
     common_1.Controller('tag'),

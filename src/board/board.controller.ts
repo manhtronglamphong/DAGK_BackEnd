@@ -2,7 +2,7 @@ import { Body, Controller, Get, Inject, Param, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { Board } from 'src/entities/board.entity';
 import { CreateBoardPipe } from 'src/lib/ValidatePipe/createBoardPipe.class';
-import { CreateBoard, RenameBoard } from './board.dto';
+import { CreateBoard, DeleteBoard, RenameBoard } from './board.dto';
 import { BoardService } from './board.service';
 
 @ApiTags('Board')
@@ -34,7 +34,7 @@ export class BoardController {
   }
 
   @Post('/deleteBoard')
-  async deleteBoard(@Body() board: CreateBoard) {
+  async deleteBoard(@Body() board: DeleteBoard) {
     return await this.boardService.deleteBoard(board);
   }
 

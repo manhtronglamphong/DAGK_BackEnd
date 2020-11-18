@@ -2,7 +2,8 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Tag } from 'src/entities/tag.entity';
 import { Repository } from 'typeorm';
-import { BoardTag, CreateTag } from './tag.dto';
+import { CreateTag, DeleteTag, RenameTag } from './tag.dto';
+var Objecttt = require('mongodb').ObjectID;
 
 @Injectable()
 export class TagService {
@@ -47,20 +48,26 @@ export class TagService {
   }
 
   async getBoardTag(boardId: string) {
-    const tag = await this.tagRepository.find({ where: { boardId: boardId } });
+    const tag = await this.tagRepository.find({
+      where: { board: boardId },
+    });
     return { data: tag };
   }
 
-  async deleteTag(tag: CreateTag) {
+  async deleteTag(tag: DeleteTag) {
     let temp = await this.tagRepository.findOne({
-      where: {
-        username: tag.username,
-        name: tag.name,
-        board: tag.board,
-        column: tag.column,
-      },
+      where: { _id: Objecttt(tag.id) },
     });
     const del = await this.tagRepository.delete(temp);
     return { data: del };
+  }
+
+  async renameTag(tag: RenameTag) {
+    let temp = await this.tagRepository.findOne({
+      where: { _id: Objecttt(tag.id) },
+    });
+    temp.name = tag.newName;
+    await this.tagRepository.update(temp._id.toString(), temp);
+    return { data: temp };
   }
 }

@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Inject, Param, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { CreateTagPipe } from 'src/lib/ValidatePipe/createTagPipe.class';
-import { BoardTag, CreateTag } from './tag.dto';
+import { CreateTag, DeleteTag, RenameTag } from './tag.dto';
 import { TagService } from './tag.service';
 
 @ApiTags('Tag')
@@ -11,19 +11,6 @@ export class TagController {
     @Inject(TagService)
     private readonly tagService: TagService,
   ) {}
-
-  @Get('/:username/:board')
-  async getBoard(
-    @Param('username') username: string,
-    @Param('board') board: string,
-  ) {
-    return await this.tagService.getTag(username, board);
-  }
-
-  @Get(':tagId')
-  async getOneTag(@Param('tagId') tagId: string) {
-    return await this.tagService.getOneTag(tagId);
-  }
 
   @Get('/board/:boardId')
   async getBoardTag(@Param('boardId') boardId: string) {
@@ -36,7 +23,12 @@ export class TagController {
   }
 
   @Post('/deleteTag')
-  async deleteTag(@Body() tag: CreateTag) {
+  async deleteTag(@Body() tag: DeleteTag) {
     return await this.tagService.deleteTag(tag);
+  }
+
+  @Post('/renameTag')
+  async renameTag(@Body() tag: RenameTag) {
+    return await this.tagService.renameTag(tag);
   }
 }
