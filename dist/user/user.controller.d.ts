@@ -1,4 +1,4 @@
-import { CreateUser, Login } from './user.dto';
+import { CreateUser, EditPassword, Login } from './user.dto';
 import { UserService } from './user.service';
 export declare class UserController {
     private readonly userService;
@@ -13,6 +13,9 @@ export declare class UserController {
         data: CreateUser & import("../entities/user.entity").User;
     }>;
     Login(user: Login): Promise<{
+        data: import("../entities/user.entity").User;
+    }>;
+    editPassword(user: EditPassword): Promise<{
         data: import("../entities/user.entity").User;
     }>;
 }

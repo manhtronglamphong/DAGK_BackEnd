@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 let User = class User {
 };
 __decorate([
-    typeorm_1.ObjectIdColumn({ name: 'id' }),
+    typeorm_1.ObjectIdColumn(),
     __metadata("design:type", String)
 ], User.prototype, "_id", void 0);
 __decorate([

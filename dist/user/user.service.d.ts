@@ -1,6 +1,6 @@
 import { User } from '../entities/user.entity';
 import { Repository } from 'typeorm';
-import { CreateUser, Login } from './user.dto';
+import { CreateUser, EditPassword, Login } from './user.dto';
 export declare class UserService {
     private readonly userRepository;
     constructor(userRepository: Repository<User>);
@@ -14,6 +14,9 @@ export declare class UserService {
         data: CreateUser & User;
     }>;
     login(user: Login): Promise<{
+        data: User;
+    }>;
+    editPassword(user: EditPassword): Promise<{
         data: User;
     }>;
 }

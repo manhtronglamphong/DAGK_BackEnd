@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Login = exports.CreateUser = void 0;
+exports.EditPassword = exports.Login = exports.CreateUser = void 0;
 const swagger_1 = require("@nestjs/swagger");
 class CreateUser {
 }
@@ -33,4 +33,19 @@ __decorate([
     __metadata("design:type", String)
 ], Login.prototype, "password", void 0);
 exports.Login = Login;
+class EditPassword {
+}
+__decorate([
+    swagger_1.ApiProperty({ type: String }),
+    __metadata("design:type", String)
+], EditPassword.prototype, "username", void 0);
+__decorate([
+    swagger_1.ApiProperty({ type: String }),
+    __metadata("design:type", String)
+], EditPassword.prototype, "password", void 0);
+__decorate([
+    swagger_1.ApiProperty({ type: String }),
+    __metadata("design:type", String)
+], EditPassword.prototype, "newpassword", void 0);
+exports.EditPassword = EditPassword;
 //# sourceMappingURL=user.dto.js.map

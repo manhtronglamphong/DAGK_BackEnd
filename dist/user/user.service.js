@@ -18,6 +18,7 @@ const typeorm_1 = require("@nestjs/typeorm");
 const bcrypt_1 = require("bcrypt");
 const user_entity_1 = require("../entities/user.entity");
 const typeorm_2 = require("typeorm");
+var Objecttt = require('mongodb').ObjectID;
 let UserService = class UserService {
     constructor(userRepository) {
         this.userRepository = userRepository;
@@ -62,6 +63,27 @@ let UserService = class UserService {
                 error: 'WRONG PASSWORD',
             }, common_1.HttpStatus.BAD_REQUEST);
         }
+        return { data: existUser };
+    }
+    async editPassword(user) {
+        const existUser = await this.userRepository.findOne({
+            where: { username: user.username },
+        });
+        if (!existUser) {
+            throw new common_1.HttpException({
+                status: common_1.HttpStatus.NOT_FOUND,
+                error: 'USERNAME NOT FOUND',
+            }, common_1.HttpStatus.NOT_FOUND);
+        }
+        if (user.password != existUser.password) {
+            throw new common_1.HttpException({
+                status: common_1.HttpStatus.BAD_REQUEST,
+                error: 'WRONG PASSWORD',
+            }, common_1.HttpStatus.BAD_REQUEST);
+        }
+        console.log(existUser);
+        existUser.password = user.newpassword;
+        await this.userRepository.update(existUser._id.toString(), existUser);
         return { data: existUser };
     }
 };

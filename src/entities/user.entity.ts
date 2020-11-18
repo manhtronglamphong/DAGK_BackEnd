@@ -10,8 +10,8 @@ import {
 } from 'typeorm';
 @Entity()
 export class User {
-  @ObjectIdColumn({ name: 'id' })
-  _id!: string;
+  @ObjectIdColumn()
+  _id: string;
 
   @PrimaryColumn()
   username: string;

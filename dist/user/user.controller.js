@@ -33,6 +33,9 @@ let UserController = class UserController {
     async Login(user) {
         return await this.userService.login(user);
     }
+    async editPassword(user) {
+        return await this.userService.editPassword(user);
+    }
 };
 __decorate([
     common_1.Get(''),
@@ -61,6 +64,13 @@ __decorate([
     __metadata("design:paramtypes", [user_dto_1.Login]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "Login", null);
+__decorate([
+    common_1.Post('/editpassword'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_dto_1.EditPassword]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "editPassword", null);
 UserController = __decorate([
     common_1.Controller('user'),
     __param(0, common_1.Inject(user_service_1.UserService)),

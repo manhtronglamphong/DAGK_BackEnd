@@ -3,7 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { hash } from 'bcrypt';
 import { User } from '../entities/user.entity';
 import { Repository } from 'typeorm';
-import { CreateUser, Login } from './user.dto';
+import { CreateUser, EditPassword, Login } from './user.dto';
+var Objecttt = require('mongodb').ObjectID;
 
 @Injectable()
 export class UserService {
@@ -64,6 +65,34 @@ export class UserService {
         HttpStatus.BAD_REQUEST,
       );
     }
+    return { data: existUser };
+  }
+
+  async editPassword(user: EditPassword) {
+    const existUser = await this.userRepository.findOne({
+      where: { username: user.username },
+    });
+    if (!existUser) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: 'USERNAME NOT FOUND',
+        },
+        HttpStatus.NOT_FOUND,
+      );
+    }
+    if (user.password != existUser.password) {
+      throw new HttpException(
+        {
+          status: HttpStatus.BAD_REQUEST,
+          error: 'WRONG PASSWORD',
+        },
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+    console.log(existUser);
+    existUser.password = user.newpassword;
+    await this.userRepository.update(existUser._id.toString(), existUser);
     return { data: existUser };
   }
 }

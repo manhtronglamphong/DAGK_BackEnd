@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Inject, Param, Post } from '@nestjs/common';
 import { CreateUserPipe } from 'src/lib/ValidatePipe/createUserPipe.class';
-import { CreateUser, Login } from './user.dto';
+import { CreateUser, EditPassword, Login } from './user.dto';
 import { UserService } from './user.service';
 
 @Controller('user')
@@ -28,5 +28,10 @@ export class UserController {
   @Post('/login')
   async Login(@Body() user: Login) {
     return await this.userService.login(user);
+  }
+
+  @Post('/editpassword')
+  async editPassword(@Body() user: EditPassword) {
+    return await this.userService.editPassword(user);
   }
 }
